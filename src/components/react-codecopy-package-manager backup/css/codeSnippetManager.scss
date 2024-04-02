@@ -1,0 +1,85 @@
+:root {
+  --code-background: #161618;
+  --active-line-color: #a8b1ff;
+  --code-block-text-default: #ebebf599;
+  --tab-color: #a1a1aa;
+  --tab-active-color: #efeffa;
+  --radius: 0.5rem;
+}
+.code-snippet-manager {
+  width: 100%;
+  max-width: 650px;
+  background-color: var(--code-background);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--tab-color);
+  border-radius: calc(var(--radius) - 2px);
+
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 12px;
+
+    .tab-btn {
+      padding: 0 12px;
+      line-height: 48px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      position: relative;
+      background-color: transparent;
+      border-color: transparent;
+      cursor: pointer;
+      color: var(--tab-color);
+
+      &:hover {
+        color: var(--tab-active-color);
+      }
+    }
+
+    .active {
+      color: var(--tab-active-color);
+      &::after {
+        position: absolute;
+        right: 7.5px;
+        bottom: -1px;
+        left: 7.5px;
+        z-index: 1;
+        height: 2px;
+        border-radius: 2.2px;
+        content: "";
+        background-color: var(--active-line-color);
+
+        transition: background-color 0.25s;
+      }
+    }
+  }
+
+  .tab-content {
+    position: relative;
+    .copy-btn {
+      position: absolute;
+      top: 12px;
+      right: 24px;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+    }
+
+    pre {
+      padding: 20px 0;
+      code {
+        display: block;
+        padding: 0 24px;
+        width: fit-content;
+        min-width: 100%;
+        font-size: 0.875rem;
+        color: var(--code-block-text-default);
+        transition: color 0.5s;
+        line-height: 1.7;
+
+        span {
+        }
+      }
+    }
+  }
+}

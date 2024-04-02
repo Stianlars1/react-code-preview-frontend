@@ -1,0 +1,5 @@
+.grid-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+}/*# sourceMappingURL=gridContainer.css.map */

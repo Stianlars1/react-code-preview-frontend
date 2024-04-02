@@ -1,0 +1,21 @@
+.grid-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+
+  display: grid;
+
+  // navbar has the hegiht of var(--nav-height)
+  // placed on top
+  &__navbar {
+  }
+
+  // sidebar has the width of var(--sidebar-width)
+  // placed on the left side beneath the navbar
+  &__sidebar {
+  }
+
+  // main has the width of var(--main--content-max-width)
+  // placed on the right side of the sidebar, but also beneath the navbar
+  &__main {
+  }
+}
