@@ -1,0 +1,26 @@
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.65rem;
+  background-color: transparent;
+  overflow: hidden;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+.icon-wrapper a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-wrapper svg {
+  fill: hsl(var(--muted-foreground));
+  transition: all 0.2s ease;
+}
+.icon-wrapper:hover {
+  background-color: hsl(var(--muted));
+  border-radius: calc(var(--radius) - 2px);
+}
+.icon-wrapper:hover svg {
+  fill: hsl(var(--foreground));
+}/*# sourceMappingURL=icon.css.map */

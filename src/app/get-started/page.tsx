@@ -1,9 +1,8 @@
 import { GridMain } from "@/components/grid/grid-components/gridMain/gridMain";
-export default function Home() {
+export default function GetStarted() {
   return (
     <GridMain>
-      <h1>React UI kit</h1>
-      <h3>Introduction</h3>
+      <h1>Get started!</h1>
       <p>
         This is the website for the npm package react-ui-kit. It is a collection
         of components for building React applications.

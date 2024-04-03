@@ -1,0 +1,32 @@
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.65rem;
+  background-color: transparent;
+  overflow: hidden;
+  transition: all 0.25s ease;
+  cursor: pointer;
+
+  // if content is link wrapper
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // if plain svg
+  svg {
+    fill: hsl(var(--muted-foreground));
+    transition: all 0.2s ease;
+  }
+
+  &:hover {
+    background-color: hsl(var(--muted));
+    border-radius: calc(var(--radius) - 2px);
+
+    svg {
+      fill: hsl(var(--foreground));
+    }
+  }
+}

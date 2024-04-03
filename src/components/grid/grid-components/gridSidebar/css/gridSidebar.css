@@ -1,1 +1,74 @@
-/*# sourceMappingURL=gridSidebar.css.map */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  background-color: hsl(var(--muted)/0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.25s, transform 0.3s ease;
+  box-shadow: hsla(0, 0%, 0%, 0.1) 0 0 0.5rem 0.25rem;
+}
+.sidebar .close-button {
+  display: none;
+  visibility: hidden;
+  transition: visibility 0.5s;
+}
+.sidebar nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.sidebar nav ul li {
+  list-style-type: none;
+  color: hsl(var(--muted-foreground));
+  transition: color 0.17s ease;
+  font-weight: 500;
+}
+.sidebar nav ul li:hover {
+  color: hsl(var(--foreground));
+}
+.sidebar nav ul .navlink-active {
+  color: hsl(var(--primary));
+}
+.sidebar nav ul .navlink-active:hover {
+  color: hsl(var(--primary)/0.76);
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-100%);
+  }
+  [data-nav-open=true] .sidebar {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0);
+    z-index: 100;
+    position: fixed;
+  }
+  [data-nav-open=true] .sidebar .close-button {
+    position: absolute;
+    top: calc(45px - 1.3rem);
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0s, visibility 0.5s;
+  }
+  [data-nav-open=true] .sidebar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: hsl(var(--background));
+    z-index: -1;
+  }
+}/*# sourceMappingURL=gridSidebar.css.map */

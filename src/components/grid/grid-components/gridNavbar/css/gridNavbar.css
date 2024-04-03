@@ -1,1 +1,12 @@
-/*# sourceMappingURL=gridNavbar.css.map */
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+  }
+}/*# sourceMappingURL=gridNavbar.css.map */
