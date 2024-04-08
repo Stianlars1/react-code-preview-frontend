@@ -1,0 +1,79 @@
+.landing-page-shortcuts {
+  &__ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    gap: 2rem;
+    &__card {
+      flex: 1 0 250px;
+      display: flex;
+      position: relative;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+
+      padding: 2rem 2.5rem;
+
+      background-color: hsl(var(--muted));
+      color: hsl(var(--muted-foreground));
+      border-radius: calc(var(--radius));
+      border: 1px solid hsl(var(--muted-foreground) / 0.5);
+      stroke-width: 0.4;
+      transition: all 147ms ease;
+
+      &:hover {
+        stroke-width: 0.6;
+        border: 1px solid hsl(var(--muted-foreground) / 0.8);
+      }
+
+      .shortcut-header {
+        align-self: flex-start;
+        h2 {
+          color: hsl(var(--foreground));
+          margin-bottom: 0.25rem;
+        }
+
+        p {
+          font-size: 0.875rem;
+          text-wrap: pretty;
+        }
+      }
+
+      &__assets-wrapper {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        overflow: visible;
+
+        img,
+        svg,
+        > * {
+          position: absolute;
+          fill: transparent;
+        }
+
+        .shuttle-svg {
+          overflow: visible;
+
+          path {
+            fill: transparent;
+            // fill: hsl(var(--svg-slate));
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes slideGlow {
+  0% {
+    left: -100%; /* Start from the left */
+  }
+  100% {
+    left: 100%; /* End at the right */
+  }
+}

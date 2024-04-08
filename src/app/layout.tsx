@@ -1,9 +1,9 @@
 import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
 
-import { GridNavbar } from "@/components/grid/grid-components/gridNavbar/gridNavbar";
 import { GridSidebar } from "@/components/grid/grid-components/gridSidebar/gridSidebar";
 import { GridContainer } from "@/components/grid/gridContainer";
+import { Navbar } from "@/components/navbar/navbar";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -20,8 +20,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body data-nav-open={false} className={GeistSans.className}>
+        <Navbar />
         <GridContainer>
-          <GridNavbar />
           {children}
           <GridSidebar />
         </GridContainer>

@@ -17,16 +17,29 @@
 
   // if plain svg
   svg {
-    fill: hsl(var(--muted-foreground));
+    fill: hsl(var(--foreground));
     transition: all 0.2s ease;
   }
 
   &:hover {
     background-color: hsl(var(--muted));
     border-radius: calc(var(--radius) - 2px);
-
     svg {
-      fill: hsl(var(--foreground));
+    }
+  }
+}
+
+@media screen and (prefers-color-scheme=dark) {
+  .icon-wrapper {
+    svg {
+      fill: hsl(var(--muted-foreground));
+    }
+
+    &:hover {
+      background-color: hsl(var(--muted));
+      svg {
+        fill: hsl(var(--foreground));
+      }
     }
   }
 }

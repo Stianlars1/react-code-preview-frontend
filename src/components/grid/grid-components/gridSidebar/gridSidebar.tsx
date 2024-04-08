@@ -1,4 +1,5 @@
-import { Divider } from "@/components/ui/divider/divider";
+import { GeistMono } from "geist/font/mono";
+import { GeistSans } from "geist/font/sans";
 import Link from "next/link";
 import { Backdrop } from "./components/backdrop/backdrop";
 import { CloseButton } from "./components/closeButton/closeButton";
@@ -7,17 +8,15 @@ import "./css/gridSidebar.css";
 
 export const GridSidebar = () => {
   return (
-    <aside className="grid-container__sidebar sidebar">
+    <aside className={`grid-container__sidebar sidebar ${GeistSans.className}`}>
       <CloseButton />
       <Backdrop />
-      <Link href={"/"}>
+      <Link className="title" href={"/"}>
         <pre>
-          <code>React UI kit</code>
+          <code className={GeistMono.className}>React UI kit</code>
         </pre>
       </Link>
-
-      <Divider />
-
+      <div className="sidebar__getting-started">Getting Started</div>
       <SidebarNav />
     </aside>
   );

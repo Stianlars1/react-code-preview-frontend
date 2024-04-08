@@ -1,16 +1,13 @@
 "use client";
-import { Icon } from "@/components/ui/icon/icon";
-import { iconSize } from "@/utils/utils";
+import { iconSize } from "@/utils/constants";
+import { Button } from "@stianlarsen/react-ui-kit";
 import { IoCloseOutline } from "react-icons/io5";
+import { handleCloseNav } from "../../utils";
 
 export const CloseButton = () => {
-  const handleCloseModal = () => {
-    const isOpen = document.body.getAttribute("data-nav-open");
-    document.body.setAttribute("data-nav-open", String(!isOpen));
-  };
   return (
-    <Icon className={"close-button"} onClick={() => handleCloseModal()}>
+    <Button variant="icon" className={"close-button"} onClick={handleCloseNav}>
       <IoCloseOutline size={iconSize} />
-    </Icon>
+    </Button>
   );
 };

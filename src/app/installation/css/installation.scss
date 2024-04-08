@@ -1,0 +1,42 @@
+.installation-page {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  &__header {
+    &__title {
+    }
+  }
+
+  &__install {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+
+    h2 {
+      color: hsl(var(--muted-foreground));
+      font-size: 1.2rem;
+    }
+
+    h3 {
+      color: hsl(var(--foreground) / 0.9);
+      font-size: 1.2rem;
+    }
+
+    h3,
+    p {
+      margin-bottom: 0.4rem;
+    }
+
+    p {
+      color: hsl(var(--muted-foreground));
+      font-size: 0.975rem;
+    }
+
+    .step-3 {
+      margin-bottom: 64px;
+    }
+  }
+}

@@ -1,31 +1,20 @@
-"use client";
 import { navLinks } from "@/content/content";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import react from "react";
+import { NavLink } from "./components/navlinks/navlink";
+import { NavlMenu } from "./components/navlinks/navlinkMenu";
 
-export const SidebarNav = () => {
-  const pathname = usePathname();
-
-  console.log("\n\n\nrouter: ", pathname);
-  const isActive = (pathnameArg: string) => pathnameArg === pathname;
-
+export const SidebarNav = react.memo(() => {
   return (
     <nav>
       <ul>
         {Object.entries(navLinks).map(([key, value]) => {
-          console.log("value: ", value);
-          console.log("pathname", pathname);
-          console.log("isActive(value.url)", isActive(value.url));
-          return (
-            <li
-              key={key}
-              className={isActive(value.url) ? "navlink-active" : ""}
-            >
-              <Link href={value.url}>{value.name}</Link>
-            </li>
-          );
+          const hasMenu = value.menu && value.menu.length > 0;
+          if (hasMenu) {
+            return <NavlMenu key={value.url} value={value} />;
+          }
+          return <NavLink key={value.url} value={value} />;
         })}
       </ul>
     </nav>
   );
-};
+});

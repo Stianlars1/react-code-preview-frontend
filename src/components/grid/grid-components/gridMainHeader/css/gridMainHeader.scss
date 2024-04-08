@@ -1,0 +1,14 @@
+.grid-main-header {
+  &__title {
+    font-size: 3.75rem;
+    color: hsl(var(--foreground));
+
+    margin-bottom: 2rem;
+  }
+
+  &__subtitle {
+    color: hsl(var(--muted-foreground));
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+}

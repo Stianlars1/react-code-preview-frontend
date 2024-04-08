@@ -14,13 +14,21 @@
   align-items: center;
 }
 .icon-wrapper svg {
-  fill: hsl(var(--muted-foreground));
+  fill: hsl(var(--foreground));
   transition: all 0.2s ease;
 }
 .icon-wrapper:hover {
   background-color: hsl(var(--muted));
   border-radius: calc(var(--radius) - 2px);
 }
-.icon-wrapper:hover svg {
-  fill: hsl(var(--foreground));
+@media screen and (prefers-color-scheme = dark) {
+  .icon-wrapper svg {
+    fill: hsl(var(--muted-foreground));
+  }
+  .icon-wrapper:hover {
+    background-color: hsl(var(--muted));
+  }
+  .icon-wrapper:hover svg {
+    fill: hsl(var(--foreground));
+  }
 }/*# sourceMappingURL=icon.css.map */

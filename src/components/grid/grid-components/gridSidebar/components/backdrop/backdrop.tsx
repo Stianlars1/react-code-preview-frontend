@@ -1,17 +1,24 @@
 "use client";
 import { useEffect } from "react";
+import { handleCloseNav } from "../../utils";
 import "./css/backdrop.css";
 
 export const Backdrop = () => {
-  const handleCloseModal = () => {
-    const isOpen = document.body.getAttribute("data-nav-open");
-    document.body.setAttribute("data-nav-open", String(!isOpen));
+  const handleKeyDown = (e: KeyboardEvent) => {
+    if (e.key === "Escape") {
+      handleCloseNav();
+    }
   };
-
   useEffect(() => {
     // Set the data-nav-open attribute to false on initial load
     document.body.setAttribute("data-nav-open", "false");
+
+    // close nav on ESC key click
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
   }, []);
 
-  return <div className="backdrop" onClick={handleCloseModal} />;
+  return <div className="backdrop" onClick={handleCloseNav} />;
 };

@@ -1,0 +1,67 @@
+.landing-page-shortcuts__ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 2rem;
+}
+.landing-page-shortcuts__ul__card {
+  flex: 1 0 250px;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 2.5rem;
+  background-color: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+  border-radius: calc(var(--radius));
+  border: 1px solid hsl(var(--muted-foreground)/0.5);
+  stroke-width: 0.4;
+  transition: all 147ms ease;
+}
+.landing-page-shortcuts__ul__card:hover {
+  stroke-width: 0.6;
+  border: 1px solid hsl(var(--muted-foreground)/0.8);
+}
+.landing-page-shortcuts__ul__card .shortcut-header {
+  align-self: flex-start;
+}
+.landing-page-shortcuts__ul__card .shortcut-header h2 {
+  color: hsl(var(--foreground));
+  margin-bottom: 0.25rem;
+}
+.landing-page-shortcuts__ul__card .shortcut-header p {
+  font-size: 0.875rem;
+  text-wrap: pretty;
+}
+.landing-page-shortcuts__ul__card__assets-wrapper {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+.landing-page-shortcuts__ul__card__assets-wrapper img,
+.landing-page-shortcuts__ul__card__assets-wrapper svg,
+.landing-page-shortcuts__ul__card__assets-wrapper > * {
+  position: absolute;
+  fill: transparent;
+}
+.landing-page-shortcuts__ul__card__assets-wrapper .shuttle-svg {
+  overflow: visible;
+}
+.landing-page-shortcuts__ul__card__assets-wrapper .shuttle-svg path {
+  fill: transparent;
+}
+
+@keyframes slideGlow {
+  0% {
+    left: -100%; /* Start from the left */
+  }
+  100% {
+    left: 100%; /* End at the right */
+  }
+}/*# sourceMappingURL=landingPageShortcuts.css.map */
