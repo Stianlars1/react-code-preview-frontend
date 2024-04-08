@@ -14,9 +14,9 @@
   justify-content: space-between;
   gap: 2rem;
   padding: 2rem 2.5rem;
-  background-color: hsl(var(--muted));
+  background-color: hsl(var(--background));
   color: hsl(var(--muted-foreground));
-  border-radius: calc(var(--radius));
+  border-radius: var(--radius);
   border: 1px solid hsl(var(--muted-foreground)/0.5);
   stroke-width: 0.4;
   transition: all 147ms ease;
@@ -57,6 +57,20 @@
   fill: transparent;
 }
 
+@media screen and (prefers-color-scheme = dark) {
+  .landing-page-shortcuts__ul__card {
+    background-color: hsl(var(--muted));
+    color: hsl(var(--muted-foreground));
+    border-radius: calc(var(--radius));
+    border: 1px solid hsl(var(--muted-foreground)/0.5);
+  }
+  .landing-page-shortcuts__ul__card:hover {
+    border: 1px solid hsl(var(--muted-foreground)/0.8);
+  }
+  .landing-page-shortcuts__ul__card .shortcut-header h2 {
+    color: hsl(var(--foreground));
+  }
+}
 @keyframes slideGlow {
   0% {
     left: -100%; /* Start from the left */

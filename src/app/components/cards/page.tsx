@@ -3,11 +3,10 @@ import { GridMain } from "@/components/grid/grid-components/gridMain/gridMain";
 import { GridMainContent } from "@/components/grid/grid-components/gridMainContent/gridMainContent";
 import { GridMainHeader } from "@/components/grid/grid-components/gridMainHeader/gridMainHeader";
 import {
-  SimpleCardCode,
-  SimpleCardDemo,
+  SimpleCardsMultiCode,
+  SimpleCardsMultiDemo,
 } from "@/docks/components/cards/simpleCard";
 import { CodePreview } from "@stianlarsen/react-code-preview";
-import { SimpleCardExample } from "./components/simpleCardExample";
 
 export default function CardsPage() {
   return (
@@ -17,9 +16,13 @@ export default function CardsPage() {
         subtitle="A small collection of easy-to-use cards for simple use-cases"
       />
 
-      <SimpleCardExample />
+      {/* <SimpleCardExample /> */}
+
       <GridMainContent>
-        <CodePreview component={SimpleCardDemo} code={SimpleCardCode} />
+        <CodePreview
+          component={SimpleCardsMultiDemo}
+          code={SimpleCardsMultiCode}
+        />
       </GridMainContent>
     </GridMain>
   );

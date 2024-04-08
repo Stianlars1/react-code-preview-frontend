@@ -1,5 +1,6 @@
 "use client";
 
+import { Hat } from "@/features/landingPage/components/landingPageShortcuts/assets/hat";
 import { ShuttleSvg } from "@/features/landingPage/components/landingPageShortcuts/assets/shuttle";
 import { SimpleCard } from "@stianlarsen/react-ui-kit";
 
@@ -16,7 +17,7 @@ export const SimpleCardExample = () => {
       <SimpleCard
         title="This is a simple card with onClick"
         description=""
-        icon={<ShuttleSvg mouseOnCard={false} />}
+        icon={<Hat mouseOnCard={false} />}
         onClick={() => window.alert("You clicked the card")}
       />
       <SimpleCard
