@@ -1,0 +1,86 @@
+.usage {
+  &__description {
+    font-size: 1rem;
+    color: hsl(var(--muted-foreground)); // a standard grey for body text
+    margin-bottom: 1rem;
+  }
+
+  &__section {
+    margin-bottom: 3rem;
+
+    &-title {
+      font-size: 2rem;
+      color: hsl(var(--foreground)); // a standard black for headers
+      margin-bottom: 0.5rem;
+    }
+
+    &-description {
+      font-size: 1rem;
+      color: hsl(var(--muted-foreground));
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__example {
+    margin-bottom: 2rem;
+
+    &-title {
+      font-size: 1.2rem;
+      color: hsl(var(--foreground));
+      margin-bottom: 0.5rem;
+    }
+
+    &-description {
+      font-size: 1rem;
+      color: hsl(var(--muted-foreground));
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__code-block {
+    color: hsl(var(--muted-foreground));
+    border-radius: 5px;
+    margin-bottom: 2rem;
+
+    pre {
+      margin: 0;
+    }
+
+    code {
+      font-family: "Source Code Pro", monospace; // a monospaced font for code
+    }
+  }
+
+  &__props-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.865rem;
+
+    th,
+    td {
+      border: 1px solid hsl(var(--border));
+      text-align: left;
+      padding: 8px;
+    }
+
+    th {
+      background-color: hsl(var(--background));
+      color: hsl(var(--foreground));
+    }
+
+    td {
+      overflow-wrap: anywhere;
+      text-wrap: stable;
+      overflow: auto;
+      hyphens: auto;
+    }
+  }
+}
+
+// Assuming you have additional styling for the copy button
+.copy-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  // Add more styles for the button appearance and interaction
+}

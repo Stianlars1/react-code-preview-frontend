@@ -24,11 +24,11 @@
 
   .title {
     height: var(--nav-height);
-    display: flex;
     align-items: center;
     justify-content: flex-start;
     border-bottom: 1.3px solid hsl(var(--muted));
     min-width: 100%;
+    font-size: 0.875rem;
     display: none;
   }
 

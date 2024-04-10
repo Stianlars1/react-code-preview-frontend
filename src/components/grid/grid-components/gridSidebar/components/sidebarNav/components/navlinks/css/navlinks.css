@@ -1,10 +1,7 @@
 .navlink,
 .navlink-menu {
   list-style-type: none;
-  color: hsl(var(--muted-foreground));
   transition: color 0.17s ease;
-  font-weight: 400;
-  font-size: 1rem;
   border-radius: calc(var(--radius) - 4px);
   position: relative;
 }
@@ -12,9 +9,12 @@
 .navlink-menu a {
   display: inline-block;
   padding: 0.5rem 1rem;
+  font-weight: 500;
+  font-size: 1rem;
+  color: hsl(var(--muted-foreground));
 }
 
-.navlink:hover {
+.navlink:hover a {
   color: hsl(var(--foreground));
 }
 
@@ -22,11 +22,11 @@
   color: hsl(var(--foreground));
 }
 
-.navlink-active {
-  color: hsl(var(--primary-foreground-high-contrast));
+.navlink-active a {
+  color: hsl(var(--primary));
 }
-.navlink-active:hover {
-  color: hsl(var(--primary-foreground-high-contrast)/0.95);
+.navlink-active:hover a {
+  color: hsl(var(--primary));
 }
 
 .navlink-menu__link-wrapper {

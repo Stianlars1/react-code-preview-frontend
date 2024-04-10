@@ -21,9 +21,13 @@
 }
 .grid-container__main {
   grid-area: main;
-  width: var(--main--content-max-width);
+  flex: 1;
+  max-width: var(--main--content-max-width);
   padding: var(--main-padding);
   z-index: 1;
+  overflow-x: hidden;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 @media screen and (max-width: 768px) {

@@ -11,11 +11,11 @@
   width: 100%;
   gap: 2rem;
 }
-.installation-page__install h2 {
+.installation-page__install .h2 {
   color: hsl(var(--muted-foreground));
   font-size: 1.2rem;
 }
-.installation-page__install h3 {
+.installation-page__install .h3 {
   color: hsl(var(--foreground)/0.9);
   font-size: 1.2rem;
 }
@@ -23,7 +23,7 @@
 .installation-page__install p {
   margin-bottom: 0.4rem;
 }
-.installation-page__install p {
+.installation-page__install .p {
   color: hsl(var(--muted-foreground));
   font-size: 0.975rem;
 }

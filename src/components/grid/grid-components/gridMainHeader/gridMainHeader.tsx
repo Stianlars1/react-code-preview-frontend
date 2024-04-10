@@ -5,7 +5,7 @@ export const GridMainHeader = ({
   subtitle,
 }: {
   title: string;
-  subtitle?: string;
+  subtitle?: string | JSX.Element;
 }) => {
   return (
     <header className="grid-container__header grid-main-header">

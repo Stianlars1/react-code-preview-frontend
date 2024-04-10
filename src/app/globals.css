@@ -1,22 +1,6 @@
-/* checking out primary colors
-
-color: #34c6d1;
-color: #81e8ef;
-color: #affff1;
-color: #c6fbff;
-color: #469ca3;
-color: #3cc490;
-color: 229 20% 98%; */
 /* Light mode */
 :root {
-  --test: #7c3aed;
-  --test: #6730c5;
-  --test: #516ff4;
-  --test: #3b54c4;
-  --test: #6a739b;
-  --test: #a1a1aa;
-  --test2: hsl(240, 4%, 16%);
-
+  --test: #22c55e;
   /* == layout sizes == */
   --sidebar-width: 260px;
   --nav-height: 65px;
@@ -39,27 +23,27 @@ color: 229 20% 98%; */
   /* == svgs == */
   --svg-slate: 240 3.7% 15.9% / 0.9;
 
-  /* == Theme == */
-  --background: 0 0% 100%;
-  --foreground: 240 10% 3.9%;
-  --card: 0 0% 100%;
-  --card-foreground: 240 10% 3.9%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 240 10% 3.9%;
-  --primary: 262.1 83.3% 57.8%;
-  --primary-foreground: 210 20% 98%;
   --primary-foreground-high-contrast: 229 54% 35%;
-  --secondary: 240 4.8% 95.9%;
-  --secondary-foreground: 240 5.9% 10%;
-  --muted: 240 4.8% 95.9%;
-  --muted-foreground: 240 3.8% 46.1%;
-  --accent: 240 4.8% 95.9%;
-  --accent-foreground: 240 5.9% 10%;
-  --destructive: 0 72.22% 50.59%;
-  --destructive-foreground: 0 0% 98%;
-  --border: 240 5.9% 90%;
-  --input: 240 5.9% 90%;
-  --ring: 240 5% 64.9%;
+  /* == Theme == */
+  --background: 0 0% 100% !important;
+  --foreground: 240 10% 3.9% !important;
+  --card: 0 0% 100% !important;
+  --card-foreground: 240 10% 3.9% !important;
+  --popover: 0 0% 100% !important;
+  --popover-foreground: 240 10% 3.9% !important;
+  --primary: 142.1 76.2% 36.3% !important;
+  --primary-foreground: 355.7 100% 97.3% !important;
+  --secondary: 240 4.8% 95.9% !important;
+  --secondary-foreground: 240 5.9% 10% !important;
+  --muted: 240 4.8% 95.9% !important;
+  --muted-foreground: 240 3.8% 46.1% !important;
+  --accent: 240 4.8% 95.9% !important;
+  --accent-foreground: 240 5.9% 10% !important;
+  --destructive: 0 84.2% 60.2% !important;
+  --destructive-foreground: 0 0% 98% !important;
+  --border: 240 5.9% 90% !important;
+  --input: 240 5.9% 90% !important;
+  --ring: 142.1 76.2% 36.3% !important;
 }
 
 /* Dark mode */
@@ -70,28 +54,28 @@ color: 229 20% 98%; */
 
     /* == svgs == */
     --svg-slate: 240 5% 64.9% / 0.5;
+    --primary-foreground-high-contrast: 211 100% 76%;
 
     /* == Theme == */
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 229 54% 50%;
-    --primary-foreground: 229 20% 98%;
-    --primary-foreground-high-contrast: 211 100% 76%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 85.7% 97.3%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --background: 20 14.3% 4.1% !important;
+    --foreground: 0 0% 95% !important;
+    --card: 24 9.8% 10% !important;
+    --card-foreground: 0 0% 95% !important;
+    --popover: 0 0% 9% !important;
+    --popover-foreground: 0 0% 95% !important;
+    --primary: 142.1 70.6% 45.3% !important;
+    --primary-foreground: 144.9 80.4% 10% !important;
+    --secondary: 240 3.7% 15.9% !important;
+    --secondary-foreground: 0 0% 98% !important;
+    --muted: 0 0% 15% !important;
+    --muted-foreground: 240 5% 64.9% !important;
+    --accent: 12 6.5% 15.1% !important;
+    --accent-foreground: 0 0% 98% !important;
+    --destructive: 0 62.8% 30.6% !important;
+    --destructive-foreground: 0 85.7% 97.3% !important;
+    --border: 240 3.7% 15.9% !important;
+    --input: 240 3.7% 15.9% !important;
+    --ring: 142.4 71.8% 29.2% !important;
   }
 }
 
@@ -105,6 +89,7 @@ html,
 body {
   max-width: 100vw;
   max-height: 100dvh;
+  min-height: 100vh;
 }
 
 body {
@@ -114,7 +99,9 @@ body {
 
 a {
   color: inherit;
+  font-size: inherit;
   text-decoration: none;
+  color: hsl(var(--foreground));
 }
 
 @media (prefers-color-scheme: dark) {
@@ -125,14 +112,23 @@ a {
 
 /*  Change util variables based on viewport width */
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 769px) {
   :root {
     /* == layout sizes == */
-    --main-padding: 64px 40px;
 
     /* == utils == */
   }
 }
+@media screen and (max-width: 768px) {
+  :root {
+    /* == layout sizes == */
+    --main-padding: 64px 40px;
+    --sidebar-width: 270px;
+
+    /* == utils == */
+  }
+}
+
 @media screen and (max-width: 500px) {
   :root {
     /* == layout sizes == */

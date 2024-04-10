@@ -1,4 +1,4 @@
-import { ButtonCode, ButtonDemo } from "@/docks/components/button/index";
+import { ButtonCode, ButtonDemo } from "@/docks/components/button";
 import {
   SimpleCardCode,
   SimpleCardDemo,

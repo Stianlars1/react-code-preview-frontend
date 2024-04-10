@@ -15,13 +15,21 @@
       font-size: 3.75rem;
       text-align: center;
       text-wrap: balance;
+
+      span {
+        color: hsl(var(--primary));
+      }
     }
 
     .mini-subtitle {
       font-size: 1.35rem;
       text-align: center;
       text-wrap: balance;
-      color: hsl(var(--foreground) / 0.9);
+      color: hsl(var(--primary) / 0.9);
+
+      @media screen and (prefers-color-scheme: light) {
+        color: hsl(var(--foreground));
+      }
     }
 
     &__subtitle {
@@ -30,6 +38,14 @@
       color: hsl(var(--muted-foreground));
       line-height: 1.7;
       max-width: 650px;
+      margin-top: 1rem;
+
+      &__link {
+        line-height: 1;
+        padding: 0;
+        margin: 0;
+        margin-right: 4px;
+      }
     }
   }
 }

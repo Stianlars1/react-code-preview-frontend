@@ -8,6 +8,7 @@
     "sidebar main"; // Sidebar and main content are side by side
   z-index: 1;
   overflow: visible;
+
   // Navbar setup
   &__navbar {
     grid-area: navbar; // Assigning to the navbar area
@@ -28,9 +29,12 @@
   // Main content setup
   &__main {
     grid-area: main; // Assigning to the main area
-    width: var(--main--content-max-width); // Setting the width
+    flex: 1;
+    max-width: var(--main--content-max-width); // Setting the width
     padding: var(--main-padding);
     z-index: 1;
+    overflow-x: hidden;
+    height: fit-content;
   }
 }
 

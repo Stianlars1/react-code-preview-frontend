@@ -16,7 +16,7 @@ export const Navbar = () => {
           <HamburgerMenu />
           <Link className="title" href={"/"}>
             <pre>
-              <code className={GeistMono.className}>React UI kit</code>
+              <code className={GeistMono.className}>React Code Preview</code>
             </pre>
           </Link>
         </div>

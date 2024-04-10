@@ -1,0 +1,97 @@
+:root {
+  --radius: 0.5rem;
+  --background: 0 0% 100%;
+  --background-editor: 240 6% 10%;
+  --foreground: 240 10% 3.9%;
+  --muted: 240 6% 10%;
+  --muted-foreground: 240 3.8% 46.1%;
+  --border: 240 5.9% 90%;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+  }
+}
+.usage-page-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  gap: 1.25rem;
+}
+.usage-page-preview__tabs {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  min-width: 100%;
+  box-shadow: inset 0 -1px hsl(var(--border));
+}
+.usage-page-preview__tabs__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0.5rem 1rem 0.75rem;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  position: relative;
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  color: hsl(var(--muted-foreground));
+  text-rendering: optimizeLegibility;
+  transition: color 0.15s ease;
+}
+.usage-page-preview__tabs__trigger:hover {
+  color: hsl(var(--foreground));
+}
+.usage-page-preview__tabs__trigger-active {
+  color: hsl(var(--foreground));
+}
+.usage-page-preview__tabs__underline {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color: hsl(var(--foreground));
+  transition: left 0.25s ease, width 0.25s ease;
+  border-radius: 0.7px;
+}
+.usage-page-preview__content {
+  width: 100%;
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  max-height: 650px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+.usage-page-preview__content__component-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 250px;
+  padding: 1rem;
+}
+
+.usage-page-preview-tabs-demo {
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+}/*# sourceMappingURL=tabsDemo.css.map */

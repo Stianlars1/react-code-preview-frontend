@@ -17,7 +17,7 @@ export const Hat = ({
     cx: "50%",
     cy: "50%",
   });
-  const color = useTheme().theme === "dark" ? "#516ff4" : "#7c3aed";
+  const color = useTheme().theme === "dark" ? "#22c55e" : "#7c3aed";
   const secondaryColor = "#a1a1aa";
 
   useEffect(() => {

@@ -1,7 +1,6 @@
 "use client";
 import { useTheme } from "@/hooks/useTheme";
 import { ReactElement, RefObject, useEffect, useState } from "react";
-import { v4 as uuid } from "uuid";
 export const ShuttleSvg = ({
   widthAndHeight,
   cursor,
@@ -20,9 +19,8 @@ export const ShuttleSvg = ({
   });
 
   // #85c0ff
-  const color = useTheme().theme === "dark" ? "#85c0ff" : "#7c3aed";
+  const color = useTheme().theme === "dark" ? "#22c55e" : "#7c3aed";
   const secondaryColor = "#a1a1aa";
-  const UniqueId = uuid();
 
   useEffect(() => {
     if (cardRef?.current && cursor?.x && cursor?.y) {

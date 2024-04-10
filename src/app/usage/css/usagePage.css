@@ -1,0 +1,70 @@
+.usage__description {
+  font-size: 1rem;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 1rem;
+}
+.usage__section {
+  margin-bottom: 3rem;
+}
+.usage__section-title {
+  font-size: 2rem;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.5rem;
+}
+.usage__section-description {
+  font-size: 1rem;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 1rem;
+}
+.usage__example {
+  margin-bottom: 2rem;
+}
+.usage__example-title {
+  font-size: 1.2rem;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.5rem;
+}
+.usage__example-description {
+  font-size: 1rem;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 1rem;
+}
+.usage__code-block {
+  color: hsl(var(--muted-foreground));
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+.usage__code-block pre {
+  margin: 0;
+}
+.usage__code-block code {
+  font-family: "Source Code Pro", monospace;
+}
+.usage__props-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.865rem;
+}
+.usage__props-table th,
+.usage__props-table td {
+  border: 1px solid hsl(var(--border));
+  text-align: left;
+  padding: 8px;
+}
+.usage__props-table th {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+.usage__props-table td {
+  overflow-wrap: anywhere;
+  text-wrap: stable;
+  overflow: auto;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+}
+
+.copy-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}/*# sourceMappingURL=usagePage.css.map */

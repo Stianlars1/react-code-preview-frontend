@@ -17,11 +17,19 @@
   text-align: center;
   text-wrap: balance;
 }
+.landing-page__header__title span {
+  color: hsl(var(--primary));
+}
 .landing-page__header .mini-subtitle {
   font-size: 1.35rem;
   text-align: center;
   text-wrap: balance;
-  color: hsl(var(--foreground)/0.9);
+  color: hsl(var(--primary)/0.9);
+}
+@media screen and (prefers-color-scheme: light) {
+  .landing-page__header .mini-subtitle {
+    color: hsl(var(--foreground));
+  }
 }
 .landing-page__header__subtitle {
   text-align: center;
@@ -29,4 +37,11 @@
   color: hsl(var(--muted-foreground));
   line-height: 1.7;
   max-width: 650px;
+  margin-top: 1rem;
+}
+.landing-page__header__subtitle__link {
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+  margin-right: 4px;
 }/*# sourceMappingURL=landingPage.css.map */

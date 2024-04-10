@@ -13,7 +13,7 @@ export const GridSidebar = () => {
       <Backdrop />
       <Link className="title" href={"/"}>
         <pre>
-          <code className={GeistMono.className}>React UI kit</code>
+          <code className={GeistMono.className}>React Code Preview</code>
         </pre>
       </Link>
       <div className="sidebar__getting-started">Getting Started</div>
