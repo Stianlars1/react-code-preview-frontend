@@ -1,15 +1,17 @@
 import { totalDownloads } from "@/app/actions";
 import { Badge } from "@/components/ui/badge/badge";
 import { npmPackageUrl } from "@/utils/constants";
-import { Button } from "@stianlarsen/react-ui-kit";
+import { Button, Loader } from "@stianlarsen/react-ui-kit";
 import { Suspense } from "react";
 import { LandingPageShortCuts } from "./components/landingPageShortcuts/landingPageShortcuts";
 import "./css/landingPage.css";
+
+export const revalidate = 60;
 export const LandingPage = async () => {
   const totalDownloaded = await totalDownloads();
 
   return (
-    <Suspense fallback="Loading">
+    <Suspense fallback={<SuspenseLoader />}>
       <section className="landing-page">
         <header className="landing-page__header">
           <Badge variant="muted">Downloads {totalDownloaded}/month</Badge>
@@ -42,5 +44,25 @@ export const LandingPage = async () => {
         <LandingPageShortCuts />
       </section>
     </Suspense>
+  );
+};
+
+export const SuspenseLoader = () => {
+  return (
+    <div
+      style={{
+        position: "fixed",
+        top: "0",
+        right: "0",
+        bottom: "0",
+        left: "0",
+        backgroundColor: "hsl(var(--background))",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Loader />
+    </div>
   );
 };
