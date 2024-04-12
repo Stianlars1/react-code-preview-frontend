@@ -5,6 +5,7 @@ import { socialMedia } from "@/content/content";
 import { iconSize } from "@/utils/constants";
 import { Button } from "@stianlarsen/react-ui-kit";
 import { GeistMono } from "geist/font/mono";
+import Image from "next/image";
 import Link from "next/link";
 import "./css/navbar.css";
 export const Navbar = () => {
@@ -15,6 +16,12 @@ export const Navbar = () => {
         <div className="title-burger-wrapper">
           <HamburgerMenu />
           <Link className="title" href={"/"}>
+            <Image
+              src={"/android-chrome-512x512.png"}
+              width={40}
+              height={40}
+              alt="logo"
+            />
             <pre>
               <code className={GeistMono.className}>React Code Preview</code>
             </pre>

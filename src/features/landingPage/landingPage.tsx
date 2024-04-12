@@ -23,7 +23,7 @@ export const LandingPage = async () => {
           </p>
           <p className="landing-page__header__subtitle">
             <Button
-              className="landing-page__header__subtitle__link"
+              id="landing-page-subtitle-link"
               href={npmPackageUrl}
               width={"fit-content"}
               variant="link"

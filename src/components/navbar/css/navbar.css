@@ -23,6 +23,15 @@
   justify-content: flex-start;
   gap: 1rem;
 }
+.navbar .navbar-wrapper .title-burger-wrapper .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.navbar .navbar-wrapper .title-burger-wrapper .title img {
+  display: block;
+}
 .navbar .navbar-wrapper .title-burger-wrapper .button {
   display: none;
 }
@@ -30,6 +39,9 @@
 @media screen and (max-width: 768px) {
   .navbar .navbar-wrapper {
     justify-content: space-between;
+  }
+  .navbar .navbar-wrapper .title-burger-wrapper .title img {
+    display: none;
   }
   .navbar .navbar-wrapper .title-burger-wrapper .button {
     display: flex;

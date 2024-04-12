@@ -39,7 +39,7 @@
   max-width: 650px;
   margin-top: 1rem;
 }
-.landing-page__header__subtitle__link {
+.landing-page__header__subtitle #landing-page-subtitle-link {
   line-height: 1;
   padding: 0;
   margin: 0;

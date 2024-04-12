@@ -1,6 +1,7 @@
 /* Light mode */
 :root {
   --test: #22c55e;
+  --test2: #16a34a;
   /* == layout sizes == */
   --sidebar-width: 260px;
   --nav-height: 65px;
