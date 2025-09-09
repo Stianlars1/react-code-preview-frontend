@@ -7,9 +7,8 @@ import { Navbar } from "@/components/navbar/navbar";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "React UI kit",
-  description:
-    "This is the website for the npm package react-ui-kit. It is a collection of components for building React applications.",
+  title: "React Code Preview",
+  description: "This is the website for the npm package react-code-preview.",
 };
 
 export default function RootLayout({
